@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "example/pb;examplepb";
+package example;
+
+service Example {
+    rpc Echo(EchoMessage) returns (EchoMessage) {
+    }
+}
+
+message EchoMessage {
+    string Body = 1;
+}
